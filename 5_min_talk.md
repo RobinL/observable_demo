@@ -4,20 +4,15 @@
 
 - This talk is about a little experiment we've done with open data that makes it much easier to use on the web.
 
-- Over the past years, data visualisation tools have improved radically, and the best tools are now web-based.
+- Over the past years, data visualisation has increasingly become something done in a web browser.
 
-- Open data offerings not kept up with this trend - data has historically been locked away in Excel pdfs.
+- Open data offerings not kept up with this trend - data has historically been locked away in Excel and pdfs.
 
 - Until recently, this didn't matter too much because building web content was difficult - so few could take advantage of machine readable open data.
 
-- Recently, the process of building web content on open data has been dramatically simplified. To the point where most analysts should be able to do it quite easily.
+- But new tools make this much easier, to the point where most analysts should be able to do without much trouble.
 
-   - That's great because we can build open data products more easily.
-   - By more importantly, our customers of open data can now get much more out of it.
-
-- But this requires us to be more careful about how we publish data - moving from pdfs and Excel to machine-readable formats.   We've recently prototyped a new way of publishing open data that enables users to take advantage of these trends.
-
-- This talk is a quick demo of how easy it now is to do.
+- I'm now going to attempt to prove this by building a dashboard using the new open data we've recently published, using free an open source tools.
 
 1 minute.
 ---
@@ -92,11 +87,8 @@ dl = DOM.download(
 )
 ```
 
-
-
-
-
 So in 5 minutes we've created an open data site that contains some statistical commentary and some charts that reads directly from our published open data.
 
 This is important because this site will stay evergreen - as we update our open data, the chart and commentary will update to reflect the latest figures.
 
+With these new tools, I hope to see much more innovative uses of open data going forward.
