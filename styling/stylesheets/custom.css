@@ -1,0 +1,26 @@
+
+div.cells {
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+
+
+}
+
+div.cell {
+
+
+    border-radius: 5px;
+    border-color: rgb(197, 197, 197);
+    border-style: solid;
+    border-width: 1px;
+
+    height: 100%;
+    padding: 6px 0.25rem;
+    margin-left: 25vw;
+    width: 50vw;
+    margin-top: 1vw;
+
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+
