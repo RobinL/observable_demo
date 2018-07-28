@@ -1,14 +1,17 @@
  // Load the Observable runtime and inspector.
- import { Runtime, Inspector } from "https://unpkg.com/@observablehq/notebook-runtime?module";
+ import { Runtime, Inspector } from "../javascripts/notebook_runtime.js";
 
 
  // Your notebook, compiled as an ES module.
- import notebook from "https://api.observablehq.com/@robinl/first-cell.js?key=025de3d3eed8b7cd";
-
+//  import notebook from "https://api.observablehq.com/@robinl/hello-world.js?key=050f8f02950258e1";
+ import notebook from "./notebook2.js"
 
  Runtime.load(notebook, (cell) => {
 
-     const outputs = ["first_cell", "second_cell", "third_cell"]
+
+    const outputs = ["title", "commentary", "chart_1", "dl", "table"]
+
+
      var cells = document.getElementById("cells")
      if (outputs.includes(cell.name)) {
 
@@ -22,6 +25,9 @@
          return {
              fulfilled: (value) => {
 
+                if ("_el" in value ){
+                    value = value._el
+                }
 
                  cell.appendChild(value)
              }
@@ -31,5 +37,3 @@
 
 
  });
-
-

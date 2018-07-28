@@ -1,0 +1,39 @@
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.10/lodash.min.js"></script>
+
+    <script type="module">
+        // Load the Observable runtime and inspector.
+        import { Runtime, Inspector } from "https://unpkg.com/@observablehq/notebook-runtime?module";
+
+
+        // Your notebook, compiled as an ES module.
+        import notebook from "https://api.observablehq.com/@robinl/first-cell.js?key=025de3d3eed8b7cd";
+
+
+        Runtime.load(notebook, (cell) => {
+
+            const outputs = ["first_cell", "second_cell"]
+
+            if (_.includes(outputs, cell.name)) {
+                return {
+                    fulfilled: (value) => {
+                        document.getElementById(cell.name).appendChild(value);
+                    }
+                };
+            }
+
+
+
+        });
+
+        debugger;
+    </script>
+</head>
+
+<body>
+
+    <div id="second_cell"></div>
+    <div id="first_cell"></div>
+
+
+</body>

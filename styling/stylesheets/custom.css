@@ -6,21 +6,36 @@ div.cells {
 
 }
 
+div.inside_header {
+    font-family: "nta", Arial, sans-serif;
+    font-size: 20x;
+    line-height: 1.8;
+    font-weight: 700;
+    text-transform: none;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
 div.cell {
 
 
-    border-radius: 5px;
+    border-left: 1px solid;
     border-color: rgb(197, 197, 197);
-    border-style: solid;
-    border-width: 1px;
 
     height: 100%;
-    padding: 6px 0.25rem;
+
+
     margin-left: 25vw;
     width: 50vw;
-    margin-top: 1vw;
+    padding-top: 1vw;
+    margin-bottom: 1vw;
 
     padding-left: 1vw;
     padding-right: 1vw;
+
+
+    overflow-x: auto;
+
 }
 
