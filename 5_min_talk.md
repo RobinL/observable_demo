@@ -1,31 +1,33 @@
 ##  Extremely fast open data prototypes
 
+https://www.gov.uk/government/collections/criminal-court-statistics
+
+https://beta.observablehq.com/@robinl/untitled/3
+
+
 ### Introduction
 
-- This talk is about a little experiment we've done with open data that makes it much easier to use on the web.
-
-- Over the past years, data visualisation has increasingly become something done in a web browser.
+- Over the past years, data presentation has increasingly become something done in a web browser.
 
 - Open data offerings not kept up with this trend - data has historically been locked away in Excel and pdfs.
 
 - Until recently, this didn't matter too much because building web content was difficult - so few could take advantage of machine readable open data.
 
-- But new tools make this much easier, to the point where most analysts should be able to do without much trouble.
+- But new tools make this much easier, to the point where most analysts should be able to do without much trouble.  This is exciting, because analysts produce too much content to make bespoke websites for every report and open data product.
 
-- I'm now going to attempt to prove this by building a dashboard using the new open data we've recently published, using free an open source tools.
+- To demonstrate why our new open data is such a big improvement, I'm going to do a quick demo of how easily we can now build some content on top of it.
 
 1 minute.
 ---
 
+Observable is our authoring environment.
+
 ```
 title = md`# Here's some amazing open data!`
-```
 
 ```
 d3 = require('d3')
 ```
-
-
 
 
 ```
@@ -46,7 +48,7 @@ table = htmlTable(data.slice(0,10))
 
 ```
 commentary = {
-  let row = data[-1]
+  let row = data[0]
   return md`In ${row.yearquarter} threre were ${row.receipts} receipts for ${row.offence_type} in ${row.crown_court_centre}`
 
 }
@@ -57,7 +59,6 @@ commentary = {
 viewof chart_1 = {
   return vega_embed(
     {
-    '$schema': 'https://vega.github.io/schema/vega-lite/v2.4.3.json',
     'data': {
         'values': data
     },
@@ -87,8 +88,10 @@ dl = DOM.download(
 )
 ```
 
-So in 5 minutes we've created an open data site that contains some statistical commentary and some charts that reads directly from our published open data.
+So in 4 minutes we've created an open data site that contains some statistical commentary and some charts that reads directly from our published open data.
 
-This is important because this site will stay evergreen - as we update our open data, the chart and commentary will update to reflect the latest figures.
+This site will stay evergreen - as we update our open data, the chart and commentary will update to reflect the latest figures.
 
-With these new tools, I hope to see much more innovative uses of open data going forward.
+ We've seen that these new tools make things much easier for users of open data.  That means that the payoff from modernising open data offerings is increasing.
+
+ So as a result of our work, we can expect to see our users creating better content that stays up to date automatically, because it reads directly from our new open data.

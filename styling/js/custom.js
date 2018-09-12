@@ -3,8 +3,8 @@
 
 
  // Your notebook, compiled as an ES module.
-//  import notebook from "https://api.observablehq.com/@robinl/hello-world.js?key=050f8f02950258e1";
- import notebook from "./notebook2.js"
+ import notebook from "https://api.observablehq.com/d/5fee84430b9f59d3.js?key=7cd60ee1c789e25c";
+//  import notebook from "./notebook1.js"
 
  Runtime.load(notebook, (cell) => {
 
