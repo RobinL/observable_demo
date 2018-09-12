@@ -24,6 +24,7 @@ Observable is our authoring environment.
 
 ```
 title = md`# Here's some amazing open data!`
+```
 
 ```
 d3 = require('d3')
