@@ -40,3 +40,24 @@ div.cell {
 
 }
 
+
+table {
+
+    border-collapse: collapse;
+    overflow: auto
+  }
+  /* Zebra striping */
+  tr:nth-of-type(odd) {
+    background: #eee;
+  }
+  th {
+    background: rgb(75, 75, 75);
+    font-weight: bold;
+    font-size: 10px;
+    color: white
+  }
+  td, th {
+    text-align: left;
+
+    font-size: 10px;
+  }
