@@ -58,6 +58,19 @@ commentary = md`In ${latest_year} there were ${rdo.int_fmt(sum_disposals)} dispo
 ```
 
 ```
+
+chart_data =   run_sql(open_data, `
+  select yearquarter, sum(disposals) as sum_disposals
+  from df
+  where offence_type = '${offence_type}'
+  group by yearquarter
+
+
+`)
+
+```
+
+```
 viewof chart_1 = {
   return vega_embed(
     {
